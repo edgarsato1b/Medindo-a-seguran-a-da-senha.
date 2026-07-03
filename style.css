@@ -1,0 +1,192 @@
+:root {
+    --cor-fundo: #001124;
+    --cor-card: #002244;
+    --cor-input-fundo: #002b55;
+    --cor-azul-destaque: #0066cc;
+    --cor-texto: #ffffff;
+    --cor-texto-secundario: #a0b2c6;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.conteudo-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-principal {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.titulo-secundario {
+    color: var(--cor-texto-secundario);
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* Área de exibição da Senha */
+.conteudo-senha {
+    background-color: var(--cor-card);
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 3px solid var(--cor-azul-destaque);
+    margin-bottom: 25px;
+}
+
+.conteudo-senha label {
+    color: var(--cor-texto-secundario);
+    margin-right: 20px;
+    font-size: 0.9rem;
+}
+
+#campo-senha {
+    background: transparent;
+    border: none;
+    color: var(--cor-texto);
+    font-size: 1.8rem;
+    font-family: monospace;
+    width: 100%;
+    outline: none;
+}
+
+/* Painel de Customização */
+.parametro {
+    background-color: var(--cor-card);
+    border: 1px solid #003366;
+    padding: 25px;
+    border-radius: 4px;
+}
+
+.parametro-titulo {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+.parametro-coluna__senha {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.parametro-senha {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.parametro-senha__titulo {
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Controles de tamanho (-) 12 (+) */
+.parametro-senha-botoes {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--cor-azul-destaque);
+    width: fit-content;
+    border-radius: 2px;
+}
+
+.parametro-senha__botao {
+    background: transparent;
+    border: none;
+    color: var(--cor-texto);
+    font-size: 1.2rem;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.parametro-senha__botao:hover {
+    background-color: var(--cor-azul-destaque);
+}
+
+.parametro-senha__texto {
+    padding: 0 15px;
+    margin: 0;
+    font-weight: bold;
+    border-left: 1px solid #003366;
+    border-right: 1px solid #003366;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilização dos Checkboxes criados pelo p5.js */
+.checkbox-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--cor-texto-secundario);
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: var(--cor-azul-destaque); /* Deixa o "check" azul */
+    transform: scale(1.1);
+}
+
+/* Barra de Medição de Força */
+.container-forca {
+    background-color: var(--cor-fundo);
+    height: 12px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.barra-forca {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estados dinâmicos da força */
+.barra-forca.fraca {
+    width: 33%;
+    background-color: #ff3333; /* Vermelho como na imagem */
+}
+
+.barra-forca.media {
+    width: 66%;
+    background-color: #ffcc00; /* Amarelo */
+}
+
+.barra-forca.forte {
+    width: 100%;
+    background-color: #00cc66; /* Verde */
+}
+
+.labels-forca {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--cor-texto-secundario);
+}
